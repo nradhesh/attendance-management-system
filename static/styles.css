@@ -1,0 +1,46 @@
+body {
+    background-color: rgb(138, 245, 245);
+    border-radius: 10px;
+}
+
+.gradient-background {
+    background: linear-gradient(300deg, rgb(244, 168, 87), rgb(247, 101, 101), orange);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+}
+.gradient-background-2 {
+    background: linear-gradient(300deg, rgb(255, 255, 8), rgb(246, 234, 144), rgb(114, 252, 190));
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 50% 100%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+img {
+    border-radius: 20px;
+}
+
+#info1,
+#info2,
+#info3,
+#info4
+{
+    float: left; /* Use float to make the elements appear side-by-side */
+    /*display: inline-block;*/
+    background: linear-gradient(300deg, rgb(255, 255, 8), rgb(246, 234, 144), rgb(114, 252, 190));
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+    border-radius: 10px;
+    margin-right: 20px; /* Add margin to create spacing between the elements */
+    font-size: 2rem;
+}
