@@ -40,7 +40,7 @@
     <div class="container col-xxl-8 px-4 py-5">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
           <div class="col-10 col-sm-8 col-lg-6">
-            <img src="static/attendence.jpeg" class="d-block mx-lg-auto img-fluid" alt="Attendence Image" id="mainimg">
+            <img src="static/attendence.jpeg" class="d-block mx-lg-auto img-fluid" alt="Attendence Image" class="mainimg">
           </div>
           <div class="col-lg-6">
             <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Attend with a smile😊</h1>
@@ -49,15 +49,28 @@
                 Are you really bored with attendance being called out loud and bearing with the uncontrollabley smart students...we are here with a solution... click ont the below link to START </p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
               <form action="/run_face_recognition" method="POST">
-                <button type="submit" class="btn btn-primary btn-lg px-4 me-md-2" fdprocessedid="7hkavj">Start Attendance</button>
+                <button type="submit" class="btn btn-primary btn-lg px-4 me-md-2" fdprocessedid="7hkavj">live process</button>
+              </form>
+              <form method="POST" action="/process_photo" enctype="multipart/form-data">
+                <input type="file" name="photo" accept=".jpg, .jpeg, .png">
+                <button type="submit" class="btn btn-primary btn-lg px-4 me-md-2" fdprocessedid="7hkavj">Process Photo</button>
+              </form>
+              <form method="POST" action="/process_video" enctype="multipart/form-data">
+                <input type="file" name="video" accept=".mp4">
+                <button type="submit" class="btn btn-primary btn-lg px-4 me-md-2" fdprocessedid="7hkavj">Process Video</button>
               </form>
               
-              <form action="{{ url_for('attendance_chart') }}" method="POST">
-                <button type="submit" class="btn btn-primary btn-lg px-4 me-md-2">Pie chart view</button>
-              </form>
-              <form action="{{ url_for('project_details') }}" method="POST">
-                <button type="submit" class="btn btn-outline-secondary btn-lg px-4">Project details</button>
-              </form>
+              
+            </div>
+            <br>
+            <div>
+                <form action="{{ url_for('attendance_chart') }}" method="POST">
+                  <button type="submit" class="btn btn-primary btn-lg px-4 me-md-2">Pie chart view</button>
+                </form>
+                <br>
+                <form action="{{ url_for('project_details') }}" method="POST">
+                  <button type="submit" class="btn btn-outline-secondary btn-lg px-4">Project details</button>
+                </form>
             </div>
           </div>
         </div>
@@ -67,7 +80,7 @@
     <div class="container px-4 py-5" id="featured-3">
         <h2 class="pb-2 border-bottom">Creators Info</h2>
         <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-              <img src='static/radheshpic.jpeg'>
+              <img src='static/radheshpic.jpeg' class="imgpic">
            
           <div class="feature col" id="info1" class="gradient-background-2">
             
@@ -80,10 +93,10 @@
               <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
             </a>
           </div>
+          <div class="new-line"></div>
+          <img src ="static/nithinpic.jpg" class="imgpic">
           <div class="feature col" id="info2" class="gradient-background-2">
-            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-              <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"></use></svg>
-            </div>
+           
             <h3 class="fs-2 text-body-emphasis">Nithin Paramkar</h3>
             <p><h2 font-color="white">Student at RIT</h2>
               <h2>USN : 1MS22CS087</h2>
@@ -93,10 +106,10 @@
               <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
             </a>
           </div>
+          <div class="new-line"></div>
+          <img src ="static/nirmithpic.jpg" class="imgpic">
           <div class="feature col" id="info3" class="gradient-background-2">
-            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-              <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
-            </div>
+            
             <h3 class="fs-2 text-body-emphasis">Nirmith MR</h3>
             <p><h2 font-color="white">Student at RIT</h2>
               <h2>USN : 1MS22CS087</h2>
@@ -106,10 +119,10 @@
               <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
             </a>
           </div>
+          <div class="new-line"></div>
+          <img src ="static/jdodda.jpg" class="imgpic">
           <div class="feature col" id="info4">
-            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-              <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
-            </div>
+            
             <h3 class="fs-2 text-body-emphasis">JD Raghuveer</h3>
             <p><h2 font-color="white">Student at RIT</h2>
               <h2>USN : 1MS22CS087</h2>
